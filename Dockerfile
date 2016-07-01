@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
         libicu-dev \
         libcurl4-openssl-dev \
         libxml2-dev \
-        nodejs
+        nodejs \
+        npm
 RUN echo "en_AU ISO-8859-1" >> /etc/locale.gen \
     echo "en_AU.UTF-8 UTF-8" >> /etc/locale.gen \
     locale-gen
