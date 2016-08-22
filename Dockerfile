@@ -23,3 +23,4 @@ RUN pecl install intl
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install -j$(nproc) curl gd iconv mcrypt mysqli mbstring dom simplexml soap xml xmlrpc zip
 RUN docker-php-ext-enable memcached intl curl
+RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/master/web/installer -O - -q | php -- --quiet --install-dir=/usr/local/bin
