@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y \
         libxml2-dev \
         nodejs \
         npm
-RUN echo "en_AU ISO-8859-1" >> /etc/locale.gen \
-    echo "en_AU.UTF-8 UTF-8" >> /etc/locale.gen \
+RUN echo "en_AU ISO-8859-1" >> /etc/locale.gen && \
+    echo "en_AU.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen
 RUN pecl install memcached
 RUN pecl install intl
