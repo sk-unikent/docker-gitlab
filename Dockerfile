@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y \
         git-core \
         unzip \
         openssh-client \
-        libmemcached-dev \
         locales \
         libicu-dev \
         libcurl4-openssl-dev \
